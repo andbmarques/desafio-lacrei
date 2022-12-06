@@ -1,30 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { Container, List, ListItem, Logo, Link } from './Navbar.styles.js';
 
 const Navbar = () => {
 
-    const [activePage, setActivePage] = useState('Home');
+    let location = useLocation();
+
+    useEffect(() => {
+        setActivePage(location.pathname)
+    }, [location]);
+
+    const [activePage, setActivePage] = useState('');
 
     return (
         <Container>
             <Logo><Link to={'/'}>Lacrei</Link></Logo>
             <List>
                 <ListItem
-                    activepath={activePage === 'Home' ? "true" : "false"}
-                    onClick={() => setActivePage('Home')}
+                    activepath={activePage === '/' ? "true" : "false"}
                 >
                     <Link to='/'> Home </Link>
                 </ListItem>
                 <ListItem
-                    activepath={activePage === 'User' ? "true" : "false"}
-                    onClick={() => setActivePage('User')}
+                    activepath={activePage === '/pessoa-usuaria' ? "true" : "false"}
                 >
                     <Link to='/pessoa-usuaria'> Pessoa Usuária </Link>
                 </ListItem>
                 <ListItem
-                    activepath={activePage === 'Professional' ? "true" : "false"}
-                    onClick={() => setActivePage('Professional')}
+                    activepath={activePage === '/profissional' ? "true" : "false"}
                 >
                     <Link to='/profissional'> Profissional </Link>
                 </ListItem>
