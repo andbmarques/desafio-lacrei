@@ -8,23 +8,23 @@ const Navbar = () => {
 
     return (
         <Container>
-            <Logo>Lacrei</Logo>
+            <Logo><Link to={'/'}>Lacrei</Link></Logo>
             <List>
                 <ListItem
-                    activepath={ activePage === 'Home' ? "true" : "false" }
-                    onClick={ () => setActivePage('Home') }
+                    activepath={activePage === 'Home' ? "true" : "false"}
+                    onClick={() => setActivePage('Home')}
                 >
                     <Link to='/'> Home </Link>
                 </ListItem>
                 <ListItem
-                activepath={ activePage === 'User' ? "true" : "false" }
-                onClick={ () => setActivePage('User') }
+                    activepath={activePage === 'User' ? "true" : "false"}
+                    onClick={() => setActivePage('User')}
                 >
                     <Link to='/pessoa-usuaria'> Pessoa Usuária </Link>
                 </ListItem>
                 <ListItem
-                    activepath={ activePage === 'Professional' ? "true" : "false" }
-                    onClick={ () => setActivePage('Professional') }
+                    activepath={activePage === 'Professional' ? "true" : "false"}
+                    onClick={() => setActivePage('Professional')}
                 >
                     <Link to='/profissional'> Profissional </Link>
                 </ListItem>

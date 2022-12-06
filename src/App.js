@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./Pages/Home/Home";
 import User from "./Pages/User/User";
 import Professional from "./Pages/Professional/Professional";
+import Bottombar from "./Components/Bottombar/Bottombar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/pessoa-usuaria" element={<User />} />
           <Route path="/profissional" element={<Professional />} />
         </Routes>
+        <Bottombar />
       </Router>
     </>
   );
