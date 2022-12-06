@@ -10,6 +10,17 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 4rem;
+
+    @media screen and (max-width: 1040px) {
+        padding: 0.5rem 2rem;
+    }
+
+    @media screen and (max-width: 520px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 4rem;
+    }
 `;
 
 export const Logo = styled.h1`
@@ -39,7 +50,7 @@ export const ListItem = styled.li`
 export const Link = styled(NavLink)`
     text-decoration: none;
     
-    &:active, &:visited {
+    &:active, &:visited, &:link {
         color: inherit;
     }
 

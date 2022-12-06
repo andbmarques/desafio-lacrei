@@ -28,7 +28,7 @@ export const Container = styled.div`
 export const Link = styled(BaseLink)`
     text-decoration: none;
 
-    &:active, &:visited {
+    &:active, &:visited, &:link {
         color: inherit;
     }
 `;

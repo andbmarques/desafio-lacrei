@@ -23,7 +23,7 @@ export const Navlink = styled.p`
 export const Link = styled(BaseLink)`
     text-decoration: none;
 
-    &:active, &:visited {
+    &:active, &:visited, &:link {
         color: inherit;
     }
 `;
@@ -43,7 +43,7 @@ export const ExternalLink = styled.a`
     text-decoration: none;
     margin-right: 2.25rem;
 
-    &:active, &:visited {
+    &:active, &:visited, &:link {
         color: inherit;
     }
 `;
