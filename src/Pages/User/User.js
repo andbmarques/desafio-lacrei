@@ -13,7 +13,7 @@ const User = () => {
             <Content style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                 <img
                     src={UserIllustration}
-                    alt="Médica segurando uma prancheta e de fundo um celular com mensagens e icones em volta."
+                    alt="Três pessoas encostadas em um celular enquanto utilizam seus celulares"
                     style={{
                         width: 540,
                         height: 421
